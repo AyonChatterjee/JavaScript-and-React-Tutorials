@@ -1,21 +1,23 @@
 import React from "react";
 
-function Car1(props) {
-    return <h2>I am a {props.brand}!</h2>
+function Person(props) {
+    return (
+    <div>
+    <h2>I am {props.information.name}!</h2>
+    <h2>My age is {props.information.age}!</h2>
+    <h2>I live in {props.information.place}!</h2>
+    </div>
+    );
 }
 
-const brandName1 = "Tata"
-const brandName2 = "Volvo"
-const brandName3 = "Ford"
-
-function ShowCarBrand() {
+function ShowPersonalDetails() {
+    const info = {name : "Ayon Chatterjee"  , age : 23 , place : "Ranchi"}
     return (
         <div>
-        <Car1 brand = {brandName1} />
-        <Car1 brand = {brandName2} />
-        <Car1 brand = {brandName3} />
+        <h1>My Personal Details</h1>
+        <Person information = {info} />
         </div>
     );
 }
 
-export default ShowCarBrand ;
+export default ShowPersonalDetails ;
