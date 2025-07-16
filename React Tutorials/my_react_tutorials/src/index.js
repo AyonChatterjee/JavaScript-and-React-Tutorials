@@ -3,11 +3,28 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 
+const myElement1 = <h1>I Love JSX</h1>
+const expression = <h1>React is {5 + 5} times better with JSX.</h1>
+const myElement = (
+  <div>
+    <p>My name is Ayon Chatterjee.</p>
+    <p>I live in Ranchi.</p>
+  </div>
+) ;
+
+const x = 15 ;
+
+const myElement2 = <h1>{x < 10 ? "Hello" : "Goodbye"}</h1>
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <App />
     <p>Hallo</p>
+    {myElement1}
+    {expression}
+    {myElement}
+    {myElement2}
   </React.StrictMode>
 );
 
