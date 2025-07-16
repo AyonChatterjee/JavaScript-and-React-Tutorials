@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
+import {Greet , CarColor} from './Greet';
 
 const myElement1 = <h1>I Love JSX</h1>
 const expression = <h1>React is {5 + 5} times better with JSX.</h1>
@@ -25,6 +26,8 @@ root.render(
     {expression}
     {myElement}
     {myElement2}
+    <Greet />
+    <CarColor />
   </React.StrictMode>
 );
 
