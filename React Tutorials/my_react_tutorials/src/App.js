@@ -1,22 +1,13 @@
 import React from "react";
+import Goal from "./ConditionRendering";
+
 
 function App() {
-  return (
-    <table>
-      <thead>
-        <tr>
-          <th>Name</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>John</td>
-        </tr>
-        <tr>
-          <td>Elsa</td>
-        </tr>
-      </tbody>
-    </table>
+  return (   
+    <div>
+      <Goal isGoal = {true}/>
+    </div>
+
   );
 }
 
