@@ -5,6 +5,7 @@ import App from './App';
 import {Greet , CarColor} from './Greet';
 import ShowPersonalDetails from './Props';
 import {Football , ClickButton} from './Events';
+import Parent from './ReactMemo';
 
 const myElement1 = <h1>I Love JSX</h1>
 const expression = <h1>React is {5 + 5} times better with JSX.</h1>
@@ -32,6 +33,7 @@ root.render(
     <ShowPersonalDetails />
     <Football />
     <ClickButton />
+    <Parent />
   </React.StrictMode>
 );
 
