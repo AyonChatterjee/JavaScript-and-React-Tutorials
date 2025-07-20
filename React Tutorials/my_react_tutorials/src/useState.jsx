@@ -7,20 +7,17 @@
 import { useState } from "react";
 import React from "react";
 
-function FavoriteColor1() {
 
-    const [color , setColor] = useState("Blue") ;
-
-    return (
-    <>
-    <h1>My favorite color is {color}</h1>
+function Car() {
+    const [car , setCar] = useState({
+        brand:"Ford" ,
+        model:"Mustang" ,
+        year:"1964" ,
+        color:"Red"
+    });
     
-    <button 
-    type = "button" 
-    onClick={() => setColor("blue")} />
-
-    </>
-    )
+    
+   return(<h1>I have a {car.brand} car of model {car.model} which was launched in {car.year} and has a color {car.color}.</h1>)
 }
 
-export default FavoriteColor1;
+export default Car;
