@@ -15,9 +15,24 @@ function Car() {
         year:"1964" ,
         color:"Red"
     });
+
+    const updateColor = () => {
+        setCar(previousState => {
+            return {...previousState , color:"blue"}
+        }) ;
+    }
     
     
-   return(<h1>I have a {car.brand} car of model {car.model} which was launched in {car.year} and has a color {car.color}.</h1>)
+   return(
+    <>
+    <h1>I have a {car.brand} car of model {car.model} which was launched in {car.year} and has a color {car.color}.</h1>    
+    <button 
+    type="button"
+    onClick={updateColor}>Blue</button>
+    </>
+   )
 }
+
+
 
 export default Car;
