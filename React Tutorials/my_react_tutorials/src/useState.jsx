@@ -11,7 +11,16 @@ function FavoriteColor1() {
 
     const [color , setColor] = useState("Blue") ;
 
-    return <h1>My favorite color is {color}</h1>
+    return (
+    <>
+    <h1>My favorite color is {color}</h1>
+    
+    <button 
+    type = "button" 
+    onClick={() => setColor("blue")} />
+
+    </>
+    )
 }
 
 export default FavoriteColor1;
