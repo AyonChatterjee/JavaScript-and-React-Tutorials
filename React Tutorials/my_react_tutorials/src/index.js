@@ -7,6 +7,7 @@ import ShowPersonalDetails from './Props';
 import {Football , ClickButton} from './Events';
 import Parent from './ReactMemo';
 import FavoriteColor from './ReactHooks';
+import FavoriteColor1 from './useState';
 
 const myElement1 = <h1>I Love JSX</h1>
 const expression = <h1>React is {5 + 5} times better with JSX.</h1>
@@ -36,6 +37,7 @@ root.render(
     <ClickButton />
     <Parent />
     <FavoriteColor />
+    <FavoriteColor1 />
   </React.StrictMode>
 );
 
