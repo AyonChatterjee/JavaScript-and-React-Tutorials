@@ -33,6 +33,4 @@ function Car() {
    )
 }
 
-
-
 export default Car;
