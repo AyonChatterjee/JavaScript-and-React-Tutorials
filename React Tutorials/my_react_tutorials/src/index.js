@@ -10,6 +10,7 @@ import FavoriteColor from './ReactHooks';
 import FavoriteColor1 from './useState';
 import Car from './useState';
 import Timer from './useEffect';
+import Counter from './useEffect';
 
 const myElement1 = <h1>I Love JSX</h1>
 const expression = <h1>React is {5 + 5} times better with JSX.</h1>
@@ -40,7 +41,7 @@ root.render(
     <Parent />
     <FavoriteColor />
     <Car/>
-    <Timer/>
+    <Counter/>
   </React.StrictMode>
 );
 
