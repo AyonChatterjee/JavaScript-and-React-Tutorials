@@ -1,20 +1,28 @@
-import React from "react";
+import React , {createContext , useContext} from "react";
+
+const UserContext = createContext() ;
 
 function App1() {
     const user = "Ayon" ;
-    return <Parent user = {user} />
+    return (
+        <UserContext.Provider value={user}>
+        <Parent />
+        </UserContext.Provider>
+    )
 }
 
-function Parent({user}) {
-    return <Child user = {user} />
+function Parent() {
+    return <Child />
 }
 
-function Child({user}) {
-    return <Grandchild user = {user} />
+function Child() {
+    return <Grandchild />
 }
 
-function Grandchild({user}) {
-    return <h3>Hello {user}!</h3>
+function Grandchild() {
+
+    const user = useContext(UserContext) ;
+    return <h3>Hello ,{user}!</h3>
 }
 
 export default App1;
