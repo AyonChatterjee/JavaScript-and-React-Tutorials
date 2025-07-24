@@ -1,20 +1,23 @@
 import { useState , useEffect } from "react";
 import React from "react";
 
-function Counter() {
+
+// Some effects require cleanup to reduce memory leaks.
+// Timeouts, subscriptions, event listeners, and other effects that are no longer needed should be disposed.
+// We do this by including a return function at the end of the useEffect Hook.
+
+function Timer() {
     const [count , setCount] = useState(0) ;
-    const [calculation, setCalculation] = useState(0);
-
+    
     useEffect(() => {
-        setCalculation(() => count * 2) ;
-    } , [count]) ;
+        let timer = setTimeout(() => {
+            setCount((count) => count + 1) ;
+        } , 1000) ;
 
-    return (
-        <>
-        <p>Count : {count}</p>
-        <button onClick={() => setCount((c) => c + 1)}>+</button>        
-        <p>Calculation : {calculation}</p>
-        </>
-    ) ;
+        return() => clearTimeout(timer)
+    } , []) ;
+    
+    return <h1>I've rendered {count} times! </h1>
 }
-export default Counter;
+
+export default Timer;

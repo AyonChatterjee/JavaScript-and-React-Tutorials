@@ -41,7 +41,7 @@ root.render(
     <Parent />
     <FavoriteColor />
     <Car/>
-    <Counter/>
+    <Timer />
   </React.StrictMode>
 );
 
