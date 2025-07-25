@@ -13,6 +13,7 @@ import Timer from './useEffect';
 import Counter from './useEffect';
 import App1 from './useContext';
 import Application from './UseRef';
+import ExpensiveComponent from './useMemo';
 
 const myElement1 = <h1>I Love JSX</h1>
 const expression = <h1>React is {5 + 5} times better with JSX.</h1>
@@ -46,6 +47,7 @@ root.render(
     <Timer />
     <App1 />
     <Application />
+    <ExpensiveComponent />
   </React.StrictMode>
 );
 
