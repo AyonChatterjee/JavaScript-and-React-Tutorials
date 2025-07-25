@@ -1,11 +1,11 @@
-import React , {useState} from "react" ;
+import React , {useCallback, useState} from "react" ;
 
 function App() {
     const [count , setCount] = useState(0) ;
 
-    const handleClick = () => {
+    const handleClick = useCallback(() => {
         console.log("Clicked from child!");
-    } ;
+    } , []) ;
 
     return (
         <>
